@@ -26,6 +26,15 @@ paths = %w(
 Invalidator.invalidate(paths)
 ```
 
+## Alternatives
+
+This gem is tailored to meet my particular needs, and may or may not be what
+you're looking for. Here are some alternatives:
+
+* https://github.com/laurilehmijoki/simple-cloudfront-invalidator
+* https://github.com/laurilehmijoki/cf-s3-invalidator
+* https://github.com/reidiculous/cloudfront-invalidator
+
 
 ## License
 
