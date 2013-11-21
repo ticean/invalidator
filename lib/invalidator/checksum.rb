@@ -10,6 +10,10 @@ module Invalidator
 
     # Flattens an object to prepare it for MD5 summing.
     #
+    # Credit:
+    # Quick hack taken from Luke's answer in StackOverflow.
+    # @see: http://stackoverflow.com/a/6462589/2019224
+    #
     def self.flatten(body)
       if body.class == Hash
         arr = []
