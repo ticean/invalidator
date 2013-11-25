@@ -9,6 +9,14 @@ module Invalidator
       :s3_bucket
     ]
 
+    REQUIRED_OPTIONS_KEYS = [
+      :aws_access_key_id,
+      :aws_secret_access_key,
+      :aws_region,
+      :cf_distribution_id,
+      :s3_bucket
+    ]
+
     DEFAULT_SAFE_MODE = true
     DEFAULT_AWS_ACCESS_KEY_ID = nil
     DEFAULT_AWS_SECRET_ACCESS_KEY = nil
@@ -48,7 +56,7 @@ module Invalidator
 
     def validate!
       # All options are required.
-      VALID_OPTIONS_KEYS.each do |k|
+      REQUIRED_OPTIONS_KEYS.each do |k|
         raise Invalidator::ConfigurationError.new "#{k} cannot be nil" \
           unless self.send(k)
       end
